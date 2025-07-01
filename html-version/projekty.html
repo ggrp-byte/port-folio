@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekty - Epic Portfolio</title>
+    <meta name="description" content="Portfolio projektów - Epic Developer">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projekty.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div id="cursor" class="cursor"></div>
+    <div id="cursor-follower" class="cursor-follower"></div>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">PORTFOLIO</span>
+                <div class="logo-dot"></div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-text="START">START</a>
+                <a href="projekty.html" class="nav-link" data-text="PROJEKTY">PROJEKTY</a>
+                <a href="o-mnie.html" class="nav-link" data-text="O MNIE">O MNIE</a>
+                <a href="kontakt.html" class="nav-link" data-text="KONTAKT">KONTAKT</a>
+            </div>
+
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="background-elements">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="particle-container" id="particles"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <main class="main-content">
+        <section class="projects-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="title-number">PORTFOLIO</span>
+                        <span class="title-main gradient-text">PROJEKTÓW</span>
+                    </h1>
+                    <p class="hero-description">
+                        Eksploruj moje najnowsze prace - od zaawansowanych aplikacji webowych po innowacyjne rozwiązania AI i blockchain.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid-section section">
+            <div class="container">
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">WSZYSTKIE</button>
+                    <button class="filter-btn" data-filter="web">WEB APPS</button>
+                    <button class="filter-btn" data-filter="ai">AI & ML</button>
+                    <button class="filter-btn" data-filter="blockchain">BLOCKCHAIN</button>
+                    <button class="filter-btn" data-filter="mobile">MOBILE</button>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card large interactive" data-category="web">
+                        <div class="project-visual">
+                            <img src="https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="E-commerce Revolution" />
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">E-commerce Revolution</h3>
+                                    <p class="project-brief">Zaawansowana platforma e-commerce z AI recommendations</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">React</span>
+                                        <span class="tech-tag">Node.js</span>
+                                        <span class="tech-tag">AI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-type">E-COMMERCE</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <h3 class="project-name">E-commerce Revolution</h3>
+                            <p class="project-description">
+                                Kompleksowa platforma e-commerce z zaawansowanymi funkcjami AI, real-time inventory management i progressive web app capabilities.
+                            </p>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-number">150%</span>
+                                    <span class="stat-label">Wzrost konwersji</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">2.5s</span>
+                                    <span class="stat-label">Czas ładowania</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">99.9%</span>
+                                    <span class="stat-label">Uptime</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-primary">
+                                    <span>SZCZEGÓŁY</span>
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    <span>LIVE DEMO</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card interactive" data-category="ai">
+                        <div class="project-visual">
+                            <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=800" alt="AI Analytics Dashboard" />
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">AI Analytics Dashboard</h3>
+                                    <p class="project-brief">Predykcyjny dashboard z machine learning</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">TensorFlow</span>
+                                        <span class="tech-tag">React</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-type">AI & ANALYTICS</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <h3 class="project-name">AI Analytics Dashboard</h3>
+                            <p class="project-description">
+                                Zaawansowany dashboard analityczny wykorzystujący machine learning do predykcji trendów i automatycznej optymalizacji procesów biznesowych.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card interactive" data-category="blockchain">
+                        <div class="project-visual">
+                            <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=800" alt="DeFi Protocol" />
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">DeFi Protocol</h3>
+                                    <p class="project-brief">Zdecentralizowany protokół finansowy</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Solidity</span>
+                                        <span class="tech-tag">Web3</span>
+                                        <span class="tech-tag">Next.js</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-type">BLOCKCHAIN</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <h3 class="project-name">DeFi Protocol</h3>
+                            <p class="project-description">
+                                Innowacyjny protokół DeFi z automatycznym yield farming, liquidity mining i advanced tokenomics dla maksymalnej efektywności kapitału.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card interactive" data-category="mobile">
+                        <div class="project-visual">
+                            <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Social Impact App" />
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">Social Impact App</h3>
+                                    <p class="project-brief">Platforma łącząca wolontariuszy</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">React Native</span>
+                                        <span class="tech-tag">Firebase</span>
+                                        <span class="tech-tag">GraphQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-type">MOBILE APP</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <h3 class="project-name">Social Impact App</h3>
+                            <p class="project-description">
+                                Mobilna aplikacja społecznościowa łącząca wolontariuszy z organizacjami charytatywnymi w czasie rzeczywistym z geolokalizacją.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card interactive" data-category="web">
+                        <div class="project-visual">
+                            <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Real Estate Platform" />
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">Real Estate Platform</h3>
+                                    <p class="project-brief">Platforma nieruchomości z VR tours</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Next.js</span>
+                                        <span class="tech-tag">WebXR</span>
+                                        <span class="tech-tag">PostgreSQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-type">REAL ESTATE</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <h3 class="project-name">Real Estate Platform</h3>
+                            <p class="project-description">
+                                Nowoczesna platforma nieruchomości z wirtualnymi tours 360°, zaawansowanymi filtrami i AI-powered property matching.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card interactive" data-category="ai">
+                        <div class="project-visual">
+                            <img src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Content Generator AI" />
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">Content Generator AI</h3>
+                                    <p class="project-brief">AI do generowania treści marketingowych</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">OpenAI</span>
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">FastAPI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-type">AI TOOLS</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <h3 class="project-name">Content Generator AI</h3>
+                            <p class="project-description">
+                                Zaawansowane narzędzie AI do automatycznego generowania treści marketingowych, postów social media i copywritingu.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements-section section">
+            <div class="container">
+                <div class="achievements-content">
+                    <h2 class="achievements-title">
+                        <span class="gradient-text">OSIĄGNIĘCIA</span> W LICZBACH
+                    </h2>
+                    
+                    <div class="achievements-grid">
+                        <div class="achievement-item glass interactive">
+                            <div class="achievement-icon">🏆</div>
+                            <div class="achievement-number" data-target="25">0</div>
+                            <div class="achievement-label">Ukończonych Projektów</div>
+                        </div>
+                        
+                        <div class="achievement-item glass interactive">
+                            <div class="achievement-icon">🚀</div>
+                            <div class="achievement-number" data-target="98">0</div>
+                            <div class="achievement-label">% Zadowolonych Klientów</div>
+                        </div>
+                        
+                        <div class="achievement-item glass interactive">
+                            <div class="achievement-icon">⚡</div>
+                            <div class="achievement-number" data-target="15">0</div>
+                            <div class="achievement-label">Technologii Opanowanych</div>
+                        </div>
+                        
+                        <div class="achievement-item glass interactive">
+                            <div class="achievement-icon">🌍</div>
+                            <div class="achievement-number" data-target="8">0</div>
+                            <div class="achievement-label">Krajów Współpracy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="projekty.js"></script>
+</body>
+</html>

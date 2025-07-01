@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Portfolio - SuperNova Level</title>
+    <meta name="description" content="Epic Portfolio - SuperNova Level Design">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div id="cursor" class="cursor"></div>
+    <div id="cursor-follower" class="cursor-follower"></div>
+    
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-text">ŁADOWANIE</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">PORTFOLIO</span>
+                <div class="logo-dot"></div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-text="START">START</a>
+                <a href="projekty.html" class="nav-link" data-text="PROJEKTY">PROJEKTY</a>
+                <a href="o-mnie.html" class="nav-link" data-text="O MNIE">O MNIE</a>
+                <a href="kontakt.html" class="nav-link" data-text="KONTAKT">KONTAKT</a>
+            </div>
+
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="background-elements">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        
+        <div class="particle-container" id="particles"></div>
+        
+        <div class="grid-overlay"></div>
+    </div>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-text">DEVELOPER</span>
+                        <div class="badge-dot"></div>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="title-line">TWORZĘ</span>
+                        <span class="title-line gradient-text">PRZYSZŁOŚĆ</span>
+                        <span class="title-line">W KODZIE</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Zaawansowane rozwiązania webowe z najnowszymi technologiami. 
+                        Od konceptu do wdrożenia - przekształcam pomysły w cyfrowe arcydzieła.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn btn-primary interactive">
+                            <span>ZOBACZ PROJEKTY</span>
+                            <div class="btn-effect"></div>
+                        </a>
+                        <a href="#kontakt" class="btn btn-secondary interactive">
+                            <span>WSPÓŁPRACA</span>
+                            <div class="btn-effect"></div>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">PROJEKTÓW</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="5">0</div>
+                            <div class="stat-label">LAT DOŚWIADCZENIA</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label">% SATYSFAKCJI</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="visual-container">
+                        <div class="code-window">
+                            <div class="window-header">
+                                <div class="window-controls">
+                                    <span class="control close"></span>
+                                    <span class="control minimize"></span>
+                                    <span class="control maximize"></span>
+                                </div>
+                                <div class="window-title">epic-portfolio.tsx</div>
+                            </div>
+                            <div class="window-content">
+                                <pre class="code-content"><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">'Epic Developer'</span>,
+  <span class="code-property">skills</span>: [
+    <span class="code-string">'React'</span>, <span class="code-string">'TypeScript'</span>,
+    <span class="code-string">'Node.js'</span>, <span class="code-string">'Python'</span>
+  ],
+  <span class="code-property">passion</span>: <span class="code-string">'Innowacja'</span>,
+  <span class="code-property">mission</span>: () => {
+    <span class="code-keyword">return</span> <span class="code-string">'Zmieniam świat przez kod'</span>;
+  }
+};</code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-elements">
+                            <div class="tech-icon tech-react">⚛️</div>
+                            <div class="tech-icon tech-js">🚀</div>
+                            <div class="tech-icon tech-node">⚡</div>
+                            <div class="tech-icon tech-python">🐍</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-text">PRZEWIŃ W DÓŁ</div>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-number">01</span>
+                        <span class="title-text">PROJEKTY</span>
+                    </h2>
+                    <p class="section-description">
+                        Wybrane prace pokazujące zaawansowane umiejętności i kreatywne podejście
+                    </p>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <article class="project-card project-featured interactive">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg?auto=compress&cs=tinysrgb&w=800" alt="E-commerce Platform" />
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-commerce Revolution</h3>
+                            <p class="project-description">
+                                Zaawansowana platforma e-commerce z AI recommendations, real-time inventory i progressive web app features.
+                            </p>
+                            <div class="project-links">
+                                <a href="projekty.html" class="project-link">
+                                    <span>SZCZEGÓŁY</span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card interactive">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=800" alt="AI Dashboard" />
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">TensorFlow</span>
+                                    <span class="tech-tag">React</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Analytics Dashboard</h3>
+                            <p class="project-description">
+                                Inteligentny dashboard z machine learning algorithms dla predykcji trendów biznesowych.
+                            </p>
+                            <div class="project-links">
+                                <a href="projekty.html" class="project-link">
+                                    <span>SZCZEGÓŁY</span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card interactive">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Blockchain App" />
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span class="tech-tag">Solidity</span>
+                                    <span class="tech-tag">Web3</span>
+                                    <span class="tech-tag">Next.js</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">DeFi Protocol</h3>
+                            <p class="project-description">
+                                Zdecentralizowany protokół finansowy z smart contracts i yield farming features.
+                            </p>
+                            <div class="project-links">
+                                <a href="projekty.html" class="project-link">
+                                    <span>SZCZEGÓŁY</span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card interactive">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mobile App" />
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span class="tech-tag">React Native</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">GraphQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Social Impact App</h3>
+                            <p class="project-description">
+                                Mobilna aplikacja łącząca wolontariuszy z organizacjami charytatywnymi w czasie rzeczywistym.
+                            </p>
+                            <div class="project-links">
+                                <a href="projekty.html" class="project-link">
+                                    <span>SZCZEGÓŁY</span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-number">02</span>
+                        <span class="title-text">UMIEJĘTNOŚCI</span>
+                    </h2>
+                    <p class="section-description">
+                        Zaawansowane technologie i narzędzia, które wykorzystuję w codziennej pracy
+                    </p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category glass interactive">
+                        <div class="category-header">
+                            <h3 class="category-title">Frontend</h3>
+                            <div class="category-icon">🎨</div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">React/Next.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">TypeScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">CSS/SASS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass interactive">
+                        <div class="category-header">
+                            <h3 class="category-title">Backend</h3>
+                            <div class="category-icon">⚙️</div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Node.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">PostgreSQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass interactive">
+                        <div class="category-header">
+                            <h3 class="category-title">DevOps</h3>
+                            <div class="category-icon">🚀</div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Docker</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="82"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">AWS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="78"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">CI/CD</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontakt" class="contact-section section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="contact-title">
+                            <span class="gradient-text">STWÓRZMY</span><br>
+                            COŚ WSPANIAŁEGO
+                        </h2>
+                        <p class="contact-description">
+                            Masz ambitny projekt? Potrzebujesz zaawansowanego rozwiązania? 
+                            Skontaktuj się ze mną i przedsięwezmy to na następny poziom.
+                        </p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">hello@epicdev.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Telefon</span>
+                                    <span class="contact-value">+48 123 456 789</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">🌍</div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Lokalizacja</span>
+                                    <span class="contact-value">Warszawa, Polska</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form glass">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required class="form-input">
+                            <label for="name" class="form-label">Imię i Nazwisko</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required class="form-input">
+                            <label for="email" class="form-label">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required class="form-input">
+                            <label for="subject" class="form-label">Temat</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required class="form-input form-textarea"></textarea>
+                            <label for="message" class="form-label">Wiadomość</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary interactive">
+                            <span>WYŚLIJ WIADOMOŚĆ</span>
+                            <div class="btn-effect"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
