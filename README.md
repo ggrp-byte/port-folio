@@ -1,48 +1,70 @@
-# Astro Starter Kit: Basics
+# Epic Portfolio - SuperNova Level
 
-```sh
-npm create astro@latest -- --template basics
+🚀 **Zaawansowane portfolio developera** stworzone w HTML, CSS i JavaScript.
+
+## ✨ Funkcje
+
+- **Responsywny design** - działa na wszystkich urządzeniach
+- **Zaawansowane animacje** - smooth scrolling, parallax, hover effects
+- **Custom cursor** - interaktywny kursor na desktop
+- **Particle system** - animowane cząsteczki w tle
+- **Loading screen** - elegancki ekran ładowania
+- **Filtry projektów** - dynamiczne filtrowanie portfolio
+- **Glassmorphism** - nowoczesne efekty szkła
+- **Gradient animations** - animowane gradienty
+- **Mobile-first** - zoptymalizowane pod urządzenia mobilne
+
+## 🛠️ Technologie
+
+- HTML5
+- CSS3 (Custom Properties, Grid, Flexbox, Animations)
+- Vanilla JavaScript (ES6+)
+- Responsive Design
+- Progressive Enhancement
+
+## 🎨 Personalizacja
+
+### Kolory
+Edytuj zmienne CSS w `styles.css`:
+```css
+:root {
+  --primary: #00ff88;      /* Główny kolor */
+  --secondary: #ff0080;    /* Kolor dodatkowy */
+  --accent: #0088ff;       /* Kolor akcentu */
+}
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+### Treść
+- **Dane kontaktowe**: Zmień w sekcji contact
+- **Projekty**: Dodaj/edytuj w `projekty.html`
+- **Umiejętności**: Modyfikuj w sekcji skills
+- **Zdjęcia**: Zamień linki Pexels na własne
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📱 Responsywność
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Strona jest w pełni responsywna z breakpointami:
+- **Desktop**: 1024px+
+- **Tablet**: 768px - 1024px
+- **Mobile**: < 768px
 
-## 🚀 Project Structure
+## ⚡ Performance
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Lazy loading** obrazów
+- **Optimized animations** z `transform` i `opacity`
+- **Minimal JavaScript** - vanilla JS bez bibliotek
+- **CSS Grid & Flexbox** dla layoutu
+- **Preload fonts** dla szybszego ładowania
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🚀 Deployment
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Strona jest automatycznie wdrażana na GitHub Pages:
+- **URL**: https://[username].github.io/[repository-name]
+- **Automatyczne aktualizacje** przy każdym push do main
 
-## 🧞 Commands
+## 📞 Kontakt
 
-All commands are run from the root of the project, from a terminal:
+Jeśli masz pytania lub potrzebujesz pomocy z customizacją, skontaktuj się ze mną!
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+**Powered by Epic Developer 🚀**
