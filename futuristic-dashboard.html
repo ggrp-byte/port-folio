@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Dashboard - Epic Portfolio</title>
+    <meta name="description" content="Zaawansowany dashboard z animowanymi wykresami i efektami glassmorphism">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <div class="logo">
+                    <div class="logo-icon">⚡</div>
+                    <span class="logo-text">FUTURISTIC</span>
+                </div>
+                <nav class="nav-tabs">
+                    <button class="nav-tab active">Dashboard</button>
+                    <button class="nav-tab">Analytics</button>
+                    <button class="nav-tab">Reports</button>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Szukaj...">
+                    <div class="search-icon">🔍</div>
+                </div>
+                <div class="user-profile">
+                    <div class="notification-dot"></div>
+                    <div class="avatar">👤</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Stats Cards -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <h3 class="stat-title">Całkowity Ruch</h3>
+                        <div class="stat-value" data-target="24567">0</div>
+                        <div class="stat-change positive">+12.5%</div>
+                    </div>
+                    <div class="stat-chart">
+                        <div class="mini-chart" data-values="20,25,30,28,35,40,38"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-content">
+                        <h3 class="stat-title">Przychody</h3>
+                        <div class="stat-value" data-target="89432">0</div>
+                        <div class="stat-change positive">+8.2%</div>
+                    </div>
+                    <div class="stat-chart">
+                        <div class="mini-chart" data-values="15,22,28,25,32,38,35"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-content">
+                        <h3 class="stat-title">Użytkownicy</h3>
+                        <div class="stat-value" data-target="12845">0</div>
+                        <div class="stat-change negative">-2.1%</div>
+                    </div>
+                    <div class="stat-chart">
+                        <div class="mini-chart" data-values="30,28,25,22,20,18,16"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-content">
+                        <h3 class="stat-title">Performance</h3>
+                        <div class="stat-value" data-target="98">0</div>
+                        <div class="stat-change positive">+5.7%</div>
+                    </div>
+                    <div class="stat-chart">
+                        <div class="mini-chart" data-values="85,88,92,90,95,98,96"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <div class="chart-container large">
+                    <div class="chart-header">
+                        <h3>Analiza Ruchu</h3>
+                        <div class="chart-controls">
+                            <button class="chart-btn active">7D</button>
+                            <button class="chart-btn">30D</button>
+                            <button class="chart-btn">90D</button>
+                        </div>
+                    </div>
+                    <div class="main-chart">
+                        <canvas id="trafficChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>Rozkład Urządzeń</h3>
+                    </div>
+                    <div class="device-stats">
+                        <div class="device-item">
+                            <div class="device-info">
+                                <span class="device-name">Desktop</span>
+                                <span class="device-percentage">64%</span>
+                            </div>
+                            <div class="device-bar">
+                                <div class="device-progress" style="width: 64%"></div>
+                            </div>
+                        </div>
+                        <div class="device-item">
+                            <div class="device-info">
+                                <span class="device-name">Mobile</span>
+                                <span class="device-percentage">28%</span>
+                            </div>
+                            <div class="device-bar">
+                                <div class="device-progress" style="width: 28%"></div>
+                            </div>
+                        </div>
+                        <div class="device-item">
+                            <div class="device-info">
+                                <span class="device-name">Tablet</span>
+                                <span class="device-percentage">8%</span>
+                            </div>
+                            <div class="device-bar">
+                                <div class="device-progress" style="width: 8%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Activity Feed -->
+            <section class="activity-section">
+                <div class="activity-header">
+                    <h3>Ostatnia Aktywność</h3>
+                    <button class="refresh-btn">🔄</button>
+                </div>
+                <div class="activity-feed">
+                    <div class="activity-item">
+                        <div class="activity-icon">📈</div>
+                        <div class="activity-content">
+                            <p>Nowy rekord sprzedaży osiągnięty</p>
+                            <span class="activity-time">2 min temu</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">👤</div>
+                        <div class="activity-content">
+                            <p>Nowy użytkownik zarejestrowany</p>
+                            <span class="activity-time">5 min temu</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">⚠️</div>
+                        <div class="activity-content">
+                            <p>Ostrzeżenie o wysokim ruchu</p>
+                            <span class="activity-time">12 min temu</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Back Button -->
+        <a href="projekty.html" class="back-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Powrót do Portfolio
+        </a>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
