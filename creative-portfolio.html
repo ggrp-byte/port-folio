@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio - Moje Projekty</title>
+    <meta name="description" content="Kreatywne portfolio z zaawansowanymi animacjami i interaktywnymi galeriami">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="creative-portfolio.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div class="portfolio-container">
+        <!-- Navigation -->
+        <nav class="creative-nav">
+            <div class="nav-brand">
+                <span class="brand-text">CREATIVE</span>
+                <div class="brand-dot"></div>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#work" class="nav-item">Work</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-background">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">CREATIVE</span>
+                    <span class="title-line highlight">DESIGNER</span>
+                    <span class="title-line">& DEVELOPER</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Tworzę wyjątkowe doświadczenia cyfrowe łączące sztukę z technologią
+                </p>
+                <div class="hero-cta">
+                    <button class="cta-button primary">Zobacz Moje Prace</button>
+                    <button class="cta-button secondary">Skontaktuj Się</button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span class="scroll-text">Przewiń</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">O Mnie</h2>
+                        <p class="about-description">
+                            Jestem pasjonatem designu i technologii, który tworzy innowacyjne rozwiązania 
+                            cyfrowe. Specjalizuję się w tworzeniu responsywnych stron internetowych, 
+                            aplikacji webowych i doświadczeń użytkownika.
+                        </p>
+                        <div class="skills-showcase">
+                            <div class="skill-item">
+                                <span class="skill-name">UI/UX Design</span>
+                                <div class="skill-level">
+                                    <div class="skill-fill" data-level="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Frontend Development</span>
+                                <div class="skill-level">
+                                    <div class="skill-fill" data-level="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Motion Design</span>
+                                <div class="skill-level">
+                                    <div class="skill-fill" data-level="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <div class="image-placeholder">👨‍💻</div>
+                            </div>
+                            <div class="profile-stats">
+                                <div class="stat">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">Projektów</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">3+</span>
+                                    <span class="stat-label">Lat Doświadczenia</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-label">Satysfakcji</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="work-section">
+            <div class="section-container">
+                <h2 class="section-title centered">Moje Prace</h2>
+                <div class="work-grid">
+                    <div class="work-item">
+                        <div class="work-image">
+                            <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Projekt 1">
+                            <div class="work-overlay">
+                                <h3>Nowoczesna Strona</h3>
+                                <p>Responsywny design z animacjami</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image">
+                            <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Projekt 2">
+                            <div class="work-overlay">
+                                <h3>Dashboard UI</h3>
+                                <p>Interfejs administracyjny</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image">
+                            <img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Projekt 3">
+                            <div class="work-overlay">
+                                <h3>E-commerce</h3>
+                                <p>Platforma sprzedażowa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image">
+                            <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Projekt 4">
+                            <div class="work-overlay">
+                                <h3>Mobile App</h3>
+                                <p>Aplikacja mobilna</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="section-title">Skontaktuj Się</h2>
+                        <p class="contact-description">
+                            Masz projekt do zrealizowania? Skontaktuj się ze mną!
+                        </p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">📧</div>
+                                <div class="method-info">
+                                    <span class="method-label">Email</span>
+                                    <span class="method-value">hello@creative.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="method-icon">📱</div>
+                                <div class="method-info">
+                                    <span class="method-label">Telefon</span>
+                                    <span class="method-value">+48 123 456 789</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form class="form">
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Twoje Imię" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-input" placeholder="Twój Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-input" placeholder="Twoja Wiadomość" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="form-submit">Wyślij Wiadomość</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back Button -->
+        <a href="projekty.html" class="back-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Powrót do Portfolio
+        </a>
+    </div>
+
+    <script src="creative-portfolio.js"></script>
+</body>
+</html>

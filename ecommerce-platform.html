@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Platform - Moje Projekty</title>
+    <meta name="description" content="Nowoczesna platforma e-commerce z zaawansowanym systemem filtrowania">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="ecommerce.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div class="ecommerce-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo">
+                    <span class="logo-icon">🛍️</span>
+                    <span class="logo-text">SHOPIFY</span>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Szukaj produktów...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="action-btn">❤️ <span class="badge">3</span></button>
+                    <button class="action-btn cart-btn">🛒 <span class="badge cart-count">0</span></button>
+                    <button class="action-btn">👤</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-categories">
+                    <button class="nav-category active" data-category="all">Wszystkie</button>
+                    <button class="nav-category" data-category="electronics">Elektronika</button>
+                    <button class="nav-category" data-category="fashion">Moda</button>
+                    <button class="nav-category" data-category="home">Dom</button>
+                    <button class="nav-category" data-category="sports">Sport</button>
+                </div>
+                
+                <div class="nav-filters">
+                    <select class="filter-select" id="sortBy">
+                        <option value="name">Sortuj: Nazwa</option>
+                        <option value="price-low">Cena: Rosnąco</option>
+                        <option value="price-high">Cena: Malejąco</option>
+                        <option value="rating">Ocena</option>
+                    </select>
+                    
+                    <div class="price-filter">
+                        <span>Cena: </span>
+                        <input type="range" id="priceRange" min="0" max="1000" value="1000">
+                        <span id="priceValue">1000 zł</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Banner -->
+            <section class="hero-banner">
+                <div class="banner-content">
+                    <h1 class="banner-title">Najlepsze Produkty Online</h1>
+                    <p class="banner-subtitle">Odkryj naszą kolekcję wysokiej jakości produktów</p>
+                    <button class="banner-cta">Kup Teraz</button>
+                </div>
+                <div class="banner-image">
+                    <img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Shopping">
+                </div>
+            </section>
+
+            <!-- Products Grid -->
+            <section class="products-section">
+                <div class="section-header">
+                    <h2 class="section-title">Nasze Produkty</h2>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">⊞</button>
+                        <button class="view-btn" data-view="list">☰</button>
+                    </div>
+                </div>
+                
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+                
+                <div class="load-more">
+                    <button class="load-more-btn">Załaduj Więcej</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Shopping Cart Sidebar -->
+        <div class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h3>Koszyk</h3>
+                <button class="close-cart">✕</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <span class="empty-icon">🛒</span>
+                    <p>Twój koszyk jest pusty</p>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Suma: <strong id="cartTotal">0 zł</strong></span>
+                </div>
+                <button class="checkout-btn">Przejdź do Płatności</button>
+            </div>
+        </div>
+
+        <!-- Product Modal -->
+        <div class="product-modal" id="productModal">
+            <div class="modal-content">
+                <button class="close-modal">✕</button>
+                <div class="modal-body">
+                    <!-- Product details will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Back Button -->
+        <a href="projekty.html" class="back-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Powrót do Portfolio
+        </a>
+    </div>
+
+    <script src="ecommerce.js"></script>
+</body>
+</html>
