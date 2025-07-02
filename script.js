@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
   }, 100);
 });
 
-// Custom cursor
+// Custom cursor - improved performance
 const cursor = document.getElementById('cursor');
 const cursorFollower = document.getElementById('cursor-follower');
 
@@ -30,15 +30,23 @@ let followerX = 0, followerY = 0;
 document.addEventListener('mousemove', (e) => {
   mouseX = e.clientX;
   mouseY = e.clientY;
+  
+  // Direct update for main cursor
   cursor.style.left = mouseX + 'px';
   cursor.style.top = mouseY + 'px';
 });
 
+// Smooth follower animation
 function animateFollower() {
-  followerX += (mouseX - followerX) * 0.1;
-  followerY += (mouseY - followerY) * 0.1;
+  const dx = mouseX - followerX;
+  const dy = mouseY - followerY;
+  
+  followerX += dx * 0.2;
+  followerY += dy * 0.2;
+  
   cursorFollower.style.left = followerX + 'px';
   cursorFollower.style.top = followerY + 'px';
+  
   requestAnimationFrame(animateFollower);
 }
 animateFollower();
@@ -59,7 +67,7 @@ interactiveElements.forEach(el => {
 // Particles
 function createParticles() {
   const container = document.getElementById('particles');
-  const particleCount = 50;
+  const particleCount = 30; // Reduced for better performance
   
   for (let i = 0; i < particleCount; i++) {
     const particle = document.createElement('div');
@@ -95,7 +103,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Animated counters
+// Animated counters - only for satisfaction stat
 function animateCounters() {
   const counters = document.querySelectorAll('.stat-number');
   const observerOptions = {
@@ -107,7 +115,7 @@ function animateCounters() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const counter = entry.target;
-        const target = parseInt(counter.getAttribute('data-target'));
+        const target = parseInt(counter.textContent);
         let current = 0;
         const increment = target / 50;
         
